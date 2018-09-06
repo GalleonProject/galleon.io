@@ -6,19 +6,19 @@ data:
     Decentralized Reward Mechanism by Cryptoeconomics
   theme: light
   actions:
-    - text: Our Vision
+    - text: Our Philosophy
       type: error
-      url: /docs/en/vision
+      url: /docs/en/whitepaper/platform__philosophy
   background_image:
     src: 
   sections:
-    - title: We bring new economic into Human Brain
+    - title: We believe Cryptoeconomics technology can make the world fair place.
       description: > 
         Contribute their brain to the world and get reward.
       theme: dark
       actions:
         - text: Learn More
-          url: /docs/en/vision
+          url: /docs/en/whitepaper/platform__philosophy
       image:
         src: 
       background_color: '#515151'
