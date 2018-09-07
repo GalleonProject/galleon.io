@@ -1,6 +1,6 @@
 # Build settings
 # theme: jekyll-theme-cayman
-remote_theme: kitian616/jekyll-TeXt-theme
+remote_theme: kitian616/jekyll-TeXt-theme@v2.1.0
 
 # Plugins
 plugins:
@@ -9,8 +9,8 @@ plugins:
 # Site settings
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://galleon.io # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl : # does not include hostname
+url     : https://galleon.network # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl : https://galleon.network # does not include hostname
 title: Galleon
 description: >
   Galleon website
@@ -25,7 +25,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : organization # "person" (default), "organization"
   name      : Galleon
-  url       : https://galleon.io
+  url       : https://galleon.network
   avatar    : # path or url of avatar image
   bio       : 
   email     : 
