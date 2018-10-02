@@ -1,4 +1,14 @@
 header:
-  - titles:
-      en:       Home
+  - title:      Home
     url:        /
+  - title:      Vision
+    url:        /docs/en/vision
+  - title:      WhitePaper
+    url:        https://github.com/GalleonProject/wiki/wiki/White-Paper
+
+
+docs-en:
+  - title:      Start
+    children:
+      - title:  Quick Start
+        url:    /docs/en/whitepaper/platform__philosophy
