@@ -4,3 +4,34 @@ article {
   }
 }
 
+%brand__type {
+  font-family: 'Nixie One', cursive;
+}
+
+.header {
+  &__brand {
+    @extend %brand__type;
+
+    > svg {
+      width: 2.92rem;
+      height: 2.92rem;
+      margin-right: 0rem;
+    }
+
+    > a {
+      font-size: 1.8rem;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.hero {
+  .article {
+    &__header {
+      h1 {
+        @extend %brand__type;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+}
