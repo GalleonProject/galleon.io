@@ -3,6 +3,8 @@ header:
     url:        /
   - title:      Vision
     url:        /docs/en/vision
+  - title:      Team
+    url:        /team
   - title:      WhitePaper
     url:        https://github.com/GalleonProject/wiki/wiki/White-Paper
 
