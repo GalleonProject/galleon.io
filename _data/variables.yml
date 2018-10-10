@@ -12,6 +12,7 @@ default:
   toc:
     selectors: 'h1,h2,h3'
   sources: bootcdn
+  news_feeds: 'https://medium.com/feed/galleon-project'
 
   page:
     header:
@@ -47,6 +48,7 @@ sources:
       css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
     mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'
     mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
+    jquery_rss: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/3.3.0/jquery.rss.min.js'
   unpkg:
     font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css'
     jquery: 'https://unpkg.com/jquery@3.3.1/dist/jquery.min.js'
@@ -57,3 +59,4 @@ sources:
       css: 'https://unpkg.com/gitalk@1.2.2/dist/gitalk.css'
     mathjax: 'https://unpkg.com/mathjax@2.7.4/unpacked/MathJax.js?config=TeX-MML-AM_CHTML'
     mermaid: 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js'
+    jquery_rss: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/3.3.0/jquery.rss.min.js'
