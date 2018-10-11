@@ -1,0 +1,29 @@
+<div class="hero hero--center" style="background-color: #fff;">
+  <div class="hero__content">
+    <h3>Join our team?</h3>
+    <p>We need your help to create best product ever.</p>
+      <form id="applicationForm" class="">
+        <input id="email" type="email" name="email"/>
+        <textArea id="body" name="body"></textArea>
+        <button type="submit" class="button button--primary button--pill">Submit</button>
+      </form>
+  </div>
+</div>
+
+<script>
+  (function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+    if (typeof web3 !== 'undefined') {
+
+      // Use the browser's ethereum provider
+      var provider = web3.currentProvider
+      console.log("web3 Provider:", provider);
+    } else {
+      console.log('No web3? You should consider trying MetaMask!');
+      // TODO show something
+    }
+  });
+})();
+</script>
