@@ -20,6 +20,24 @@
       // Use the browser's ethereum provider
       var provider = web3.currentProvider
       console.log("web3 Provider:", provider);
+
+      $("#applicationForm").submit(function(event) {
+        event.preventDefault();
+        var formData = new FormData($(this).get(0));
+        var email = formData.get("email");
+        var body = formData.get("body");
+        $.getJSON(SOURCES.dform_abi, function(dFormAbi) {
+          var dFormContract = web3.eth.contract(dFormAbi.abi).at(SOURCES.dform_contract);
+          console.log("dForm contract is initialized.");
+
+          dFormContract.sendApplication(body, email, function(error, result){
+            console.log(error, result);
+          });
+        });
+
+        
+      });
+
     } else {
       console.log('No web3? You should consider trying MetaMask!');
       // TODO show something
