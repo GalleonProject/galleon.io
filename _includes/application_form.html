@@ -2,11 +2,30 @@
   <div class="hero__content">
     <h3>Join our team?</h3>
     <p>We need your help to create best product ever.</p>
-      <form id="applicationForm" class="">
-        <input id="email" type="email" name="email"/>
-        <textArea id="body" name="body"></textArea>
-        <button type="submit" class="button button--primary button--pill">Submit</button>
+    <div class="js-dform">
+      <form id="applicationForm" class="pure-form pure-form-aligned">
+        <fieldset>
+          <div class="pure-control-group">
+            <input id="email" type="email" name="email" placeholder="Email*" required>
+          </div>
+          <div class="pure-control-group">
+            <textarea id="body" name="body" maxlength="512" cols="44" rows="4" placeholder="Message*" required></textarea>
+          </div>
+          <div class="pure-control-group">
+            <button type="submit" class="button button--primary button--pill">Send</button>
+          </div>
+        </fieldset>
       </form>
+    </div>
+    <div class="js-dform__hint dform__hint">
+      <p class="lead">
+        This application form is builded on Ethereum.<br>
+        <a href="https://metamask.io/">
+          Install <strong>Metamask</strong> brower plugin.
+        </a><br>
+        And use <strong>Rinkeby</strong> network to see the form.
+      </p>
+    </div>
   </div>
 </div>
 
@@ -19,29 +38,35 @@
 
       // Use the browser's ethereum provider
       var provider = web3.currentProvider
-      console.log("web3 Provider:", provider);
+      var network = web3.version.network;
+      console.log("web3 Provider:", provider, "network:", network);
 
-      $("#applicationForm").submit(function(event) {
-        event.preventDefault();
-        var formData = new FormData($(this).get(0));
-        var email = formData.get("email");
-        var body = formData.get("body");
-        $.getJSON(SOURCES.dform_abi, function(dFormAbi) {
-          var dFormContract = web3.eth.contract(dFormAbi.abi).at(SOURCES.dform_contract);
-          console.log("dForm contract is initialized.");
+      if (network == 4) {
+        // Rinkeby Network
+        $(".js-dform__hint").hide();
+        $("#applicationForm").submit(function(event) {
+          event.preventDefault();
+          var formData = new FormData($(this).get(0));
+          var email = formData.get("email");
+          var body = formData.get("body");
+          $.getJSON(SOURCES.dform_abi, function(dFormAbi) {
+            var dFormContract = web3.eth.contract(dFormAbi.abi).at(SOURCES.dform_contract);
+            console.log("dForm contract is initialized.");
 
-          dFormContract.sendApplication(body, email, function(error, result){
-            console.log(error, result);
+            dFormContract.sendApplication(body, email, function(error, result){
+              console.log(error, result);
+            });
           });
         });
-
-        
-      });
-
+      } else {
+        $("#applicationForm").hide();
+      }
     } else {
       console.log('No web3? You should consider trying MetaMask!');
+      $("#applicationForm").hide();
       // TODO show something
     }
   });
 })();
 </script>
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/forms-min.css" integrity="sha384-FmOvPjY6YwQXYea5Ja+3CH7+feIm/+HpUXtRUh8g0F7ybli4aDV//h1GzWLDpwHO" crossorigin="anonymous">
