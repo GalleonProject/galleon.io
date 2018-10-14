@@ -9,6 +9,8 @@ article {
 }
 
 .header {
+  $self: &;
+
   &__brand {
     @extend %brand__type;
 
@@ -21,6 +23,14 @@ article {
     > a {
       font-size: 1.8rem;
       vertical-align: bottom;
+    }
+  }
+
+  &--dark {
+    #{$self}__brand {
+      > svg {
+        fill: $text-color-theme-dark-d;
+      }
     }
   }
 }
