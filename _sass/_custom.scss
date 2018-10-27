@@ -1,8 +1,6 @@
 article {
   p {
     font-feature-settings : "pkna";
-    margin-top: 0;
-    margin-bottom: 1.5rem;
   }
 }
 
@@ -57,5 +55,17 @@ h2 {
     h1,h2,h3,h4 {
       margin-bottom: 0;
     }
+  }
+}
+
+.article__content {
+  p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  h6 {
+    // For Eyebrow
+    margin-top: 0;
   }
 }

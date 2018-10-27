@@ -176,18 +176,14 @@ exclude:
 defaults:
   - scope:
       path: ""
-      type: posts
     values:
       layout: article
       license: false
-      category: post
-      aside:
-        toc: true
       show_edit_on_github: false
       pageview: false
   - scope:
       path: ""
-      type: articles
+      type: "articles"
     values:
       show_date: false
 
