@@ -1,7 +1,13 @@
 article {
   p {
     font-feature-settings : "pkna";
+    margin-top: 0;
+    margin-bottom: 1.5rem;
   }
+}
+
+h2 {
+  margin-top: 2rem;
 }
 
 %brand__type {
