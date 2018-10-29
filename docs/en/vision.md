@@ -23,11 +23,11 @@ Public, permissionless blockchains are dependent for their security and reliabil
 
 On the Internet, we cannot confirm the reliability of almost all information. We think that there are many areas where needs accurate information on the Internet. The decentralized review process could be one of the ways to assure reliability. People have contributed for free so far on the Internet, but people should be able to receive rewards for intellectual contribution on the future.
 
-We believe a mechanism design approach can achive this as sustainable platform while producing value of trust continuously.
+We believe a mechanism design approach can achieve this as sustainable platform while producing value of trust continuously.
 
 ## Goals
 
-Galleon provides a community based venue for proposing and discussing new decentralized review plaftorm features.
+Galleon provides a community based venue for proposing and discussing new decentralized review platform features.
 Each proposal will be discussed in its own repository within the GitHub account. Membership of the group is open to everybody.
 
 ## Scope of Work
@@ -56,4 +56,4 @@ Galleon Platform is built as SmartContracts on the public blockchain Ethereum an
 
 * **A method for assuring tamper proof and traceability of information.**
 
-* **A method for transfering rewards.**
+* **A method for transferring rewards.**
